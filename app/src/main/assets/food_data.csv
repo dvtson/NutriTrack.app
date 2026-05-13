@@ -1,0 +1,444 @@
+﻿food_name;calories;protein;carbs;fat
+Phở bò;90;4.5;14.2;1.5
+Phở gà;85;4.0;13.5;1.2
+Bún bò Huế;100;4.5;15.0;2.0
+Bún riêu cua;80;3.5;12.0;1.8
+Bún chả;145;6.5;18.0;5.2
+Bún thịt nướng;150;6.8;19.0;5.5
+Bún đậu mắm tôm;180;8.0;16.0;9.0
+Bún mắm;95;5.0;14.0;1.5
+Hủ tiếu Nam Vang;105;5.2;16.5;2.0
+Mì Quảng;120;6.0;18.0;2.5
+Bánh canh cua;95;4.5;15.5;1.5
+Cao lầu;130;5.5;20.0;2.8
+Miến lươn;110;6.0;15.0;2.5
+Cơm tấm sườn nướng;180;7.0;25.0;5.5
+Cơm chiên Dương Châu;165;5.5;22.0;6.0
+Cơm gà Hội An;155;7.5;21.0;4.5
+Cơm cháy kho quẹt;220;5.0;35.0;6.5
+Xôi xéo;210;6.0;38.0;4.0
+Xôi gấc;200;4.5;40.0;2.5
+Xôi mặn;230;7.5;35.0;6.0
+Cháo lòng;85;4.0;10.0;3.0
+Cháo gà;70;3.5;11.0;1.2
+Bánh mì thịt;240;9.5;28.0;9.0
+Bánh mì xíu mại;210;8.0;26.0;7.5
+Bánh mì chảo;250;10.0;22.0;12.0
+Gỏi cuốn;95;4.0;16.0;1.2
+Chả giò (Nem rán);280;8.5;20.0;18.0
+Nem nướng;220;12.0;10.0;14.0
+Bánh cuốn;110;3.5;18.0;2.5
+Bánh xèo;170;5.5;15.0;9.5
+Bánh khọt;185;6.0;16.0;10.5
+Bánh bèo;120;3.0;22.0;2.0
+Bánh bột lọc;140;2.5;28.0;2.0
+Thịt kho tàu;260;14.0;5.0;20.0
+Cá kho tộ;210;18.0;4.0;12.0
+Gà kho gừng;180;16.0;3.0;11.0
+Sườn xào chua ngọt;240;15.0;12.0;14.0
+Bò lúc lắc;210;18.0;6.0;12.0
+Bò lá lốt;230;15.0;4.0;16.0
+Chả lụa;140;13.0;3.0;8.0
+Tôm rang thịt ba chỉ;250;14.0;2.0;19.0
+Mực xào chua ngọt;120;15.0;8.0;2.5
+Gỏi ngó sen tôm thịt;85;6.0;12.0;1.5
+Gỏi đu đủ bò khô;110;7.0;15.0;2.5
+Rau muống xào tỏi;65;2.5;5.0;4.0
+Canh chua cá lóc;70;6.0;8.0;1.5
+Đậu hũ sốt cà chua;105;7.0;6.0;6.5
+Chè trôi nước;160;2.0;35.0;1.5
+Chè ba màu;140;3.0;30.0;1.0
+Bánh da lợn;175;2.5;38.0;1.5
+Bánh chuối nướng;190;3.0;40.0;2.0
+Chuối chiên;250;2.0;35.0;12.0
+Bánh tráng trộn;280;4.5;38.0;12.0
+Bánh tráng nướng;250;6.0;25.0;14.0
+Cá viên chiên;260;12.0;15.0;16.0
+Bò viên chiên;270;14.0;12.0;18.0
+Hồ lô nướng;320;15.0;10.0;24.0
+Trứng cút lộn xào me;180;10.0;12.0;10.0
+Trứng vịt lộn;190;13.5;1.5;14.0
+Bột chiên;220;5.0;26.0;10.0
+Phá lấu bò;160;14.0;6.0;8.0
+Bắp xào mỡ hành;150;3.0;22.0;5.5
+Xúc xích nướng;300;12.0;4.0;26.0
+Lạp xưởng nướng;340;14.0;16.0;24.0
+Nem chua rán;290;10.0;18.0;20.0
+Bánh bao chỉ;180;3.0;38.0;1.5
+Bánh gối;240;6.0;28.0;11.5
+Quẩy nóng;310;7.0;45.0;11.0
+Bánh đúc nóng;110;4.5;16.0;3.0
+Bánh giò;160;5.0;20.0;6.5
+Bánh tôm Hồ Tây;260;8.0;22.0;15.0
+Nộm bò khô;120;9.0;14.0;3.0
+Chè thái;110;1.5;20.0;2.5
+Chè bưởi;150;1.0;30.0;2.5
+Chè bắp;130;2.0;28.0;1.0
+Chè chuối;140;1.5;25.0;3.5
+Chè đậu đen;120;4.0;24.0;0.5
+Chè đậu xanh;115;4.5;22.0;0.5
+Chè khúc bạch;140;3.5;18.0;6.0
+Sương sáo;40;0.5;9.0;0.1
+Tàu hũ nước đường;80;3.0;16.0;0.5
+Sữa chua nếp cẩm;100;3.5;15.0;2.5
+Kem bơ;180;2.0;18.0;11.0
+Kem xôi;160;3.0;28.0;4.0
+Rau câu dừa;60;0.5;14.0;0.2
+Bánh pía;320;4.0;50.0;11.0
+Bánh đậu xanh;420;8.0;60.0;16.0
+Bánh cốm;280;3.5;62.0;1.5
+Bánh phu thê;250;2.0;58.0;1.0
+Bánh in;350;3.0;75.0;4.0
+Bánh tét;210;5.5;35.0;4.5
+Bánh chưng;230;6.0;36.0;6.0
+Bánh đúc lá dứa;90;1.0;20.0;0.5
+Mứt dừa;450;1.0;70.0;18.0
+Mứt gừng;380;0.5;90.0;0.5
+Kẹo cu đơ;410;9.0;65.0;13.0
+Kẹo dừa;400;1.0;78.0;9.0
+Bánh gai;260;4.0;55.0;2.5
+Cà phê sữa đá;85;1.5;15.0;2.0
+Cà phê đen;5;0.1;1.0;0.0
+Trà sữa trân châu;75;0.5;14.0;1.5
+Trà đào cam sả;45;0.2;11.0;0.1
+Trà tắc;40;0.1;10.0;0.0
+Nước mía;65;0.2;16.0;0.0
+Nước dừa tươi;20;0.2;4.5;0.2
+Sữa bắp;70;1.5;12.0;1.5
+Sữa đậu nành;45;3.0;4.0;1.8
+Nước sâm;35;0.1;8.5;0.0
+Thịt ba chỉ luộc;260;16.0;0.0;21.0
+Thịt rang cháy cạnh;310;18.0;5.0;23.0
+Sườn non ram mặn;280;15.0;12.0;18.0
+Thịt băm sốt cà chua;210;14.0;6.0;14.0
+Thịt chân giò luộc;230;17.0;0.0;17.0
+Thịt heo quay giòn da;340;14.0;2.0;30.0
+Bò xào cần tây;180;20.0;6.0;8.0
+Bò sốt vang;190;18.0;8.0;9.0
+Bò né;220;19.0;5.0;13.0
+Bê xào sả ớt;175;21.0;4.0;8.0
+Gà luộc;165;20.0;0.0;9.0
+Gà chiên nước mắm;270;18.0;12.0;16.0
+Gà xào sả ớt;210;19.0;8.0;11.0
+Gà rang muối;290;17.0;15.0;16.0
+Vịt quay;280;16.0;4.0;22.0
+Vịt luộc;210;18.0;0.0;15.0
+Ngan cháy tỏi;320;17.0;8.0;24.0
+Chim cút quay;260;19.0;2.0;18.0
+Cá chép om dưa;140;15.0;6.0;6.0
+Cá diêu hồng chiên xù;240;16.0;8.0;15.0
+Cá lóc nướng trui;130;18.0;2.0;5.0
+Cá kèo kho tộ;160;15.0;5.0;8.0
+Cá nục kho cà;150;17.0;4.0;7.0
+Cá thu sốt cà chua;170;19.0;5.0;8.0
+Tôm luộc;99;21.0;0.0;1.0
+Tôm sú nướng mỡ hành;160;18.0;2.0;8.0
+Tôm rang muối tiêu;180;19.0;4.0;9.0
+Mực hấp gừng;105;16.0;3.0;2.0
+Mực nhồi thịt;190;17.0;6.0;10.0
+Cua rang me;140;15.0;12.0;4.0
+Ghẹ hấp;95;18.0;0.0;1.5
+Nghêu hấp sả;75;11.0;4.0;1.0
+Ốc hương rang muối;130;15.0;8.0;3.0
+Ốc móng tay xào rau muống;115;12.0;6.0;4.0
+Canh măng móng giò;180;9.0;4.0;14.0
+Canh bí đỏ thịt băm;85;5.0;9.0;3.0
+Canh khổ qua nhồi thịt;95;6.0;5.0;5.0
+Canh sườn sụn sấu;120;7.0;6.0;7.0
+Canh cải bẹ xanh cá rô;70;6.0;4.0;2.0
+Canh rong biển đậu hũ thịt băm;65;5.0;3.0;3.5
+Canh bầu nấu tôm;45;4.0;4.0;1.0
+Canh ngao nấu chua;55;5.0;5.0;1.5
+Canh cua mồng tơi rau đay;40;4.0;3.0;1.0
+Rau muống luộc;25;2.5;3.5;0.2
+Bắp cải xào tỏi;50;2.0;6.0;2.5
+Đậu cove xào thịt bò;110;8.0;6.0;6.0
+Cà tím nướng mỡ hành;95;1.5;8.0;6.0
+Măng tây xào thịt bò;130;9.0;5.0;8.0
+Su su xào tỏi;45;1.0;6.0;2.0
+Cải ngồng xào tỏi;55;2.5;5.0;3.0
+Nộm hoa chuối tôm thịt;90;7.0;10.0;2.5
+Dưa cải muối;20;1.5;3.0;0.2
+Cà pháo muối;25;1.0;4.0;0.1
+Kim chi Việt Nam;30;1.5;5.0;0.5
+Chả cá Lã Vọng;230;14.0;8.0;15.0
+Khâu nhục;350;12.0;10.0;28.0
+Thắng cố;180;16.0;4.0;10.0
+Bê thui Cầu Mống;160;20.0;2.0;7.0
+Tré;190;15.0;5.0;12.0
+Nem chua;150;18.0;6.0;5.0
+Gỏi cá mai;110;14.0;8.0;2.0
+Bún quậy Phú Quốc;105;6.0;16.0;1.5
+Bánh canh Trảng Bàng;115;5.0;18.0;2.0
+Đậu hũ chiên sả ớt;160;11.0;8.0;10.0
+Đậu hũ nhồi thịt sốt cà;180;12.0;9.0;11.0
+Đậu hũ non sốt nấm;95;6.0;8.0;4.0
+Trứng chiên đúc thịt;210;13.0;3.0;16.0
+Trứng luộc;155;13.0;1.1;11.0
+Trứng kho thịt;230;14.0;5.0;17.0
+Mắm tép chưng thịt;310;17.0;12.0;21.0
+Ức gà luộc;165;31.0;0.0;3.6
+Ức gà áp chảo;185;30.0;0.0;5.0
+Lòng trắng trứng luộc;52;11.0;0.7;0.2
+Thăn bò áp chảo (thịt nạc);206;28.0;0.0;9.0
+Cá hồi áp chảo;208;20.0;0.0;13.0
+Cá hồi hấp;195;22.0;0.0;11.0
+Cá ngừ ngâm nước muối (đóng hộp);86;19.0;0.0;0.9
+Cá rô phi áp chảo;128;26.0;0.0;2.5
+Thịt heo nạc thăn luộc;143;26.0;0.0;3.5
+Tôm bóc vỏ hấp;99;21.0;0.0;1.0
+Cơm gạo lứt;112;2.6;24.0;0.9
+Khoai lang luộc;86;1.6;20.0;0.1
+Khoai lang nướng;90;2.0;21.0;0.2
+Yến mạch (chưa nấu);389;16.9;66.3;6.9
+Bánh mì đen;259;9.0;48.0;3.3
+Bánh mì nguyên cám;247;13.0;41.0;4.2
+Bún gạo lứt (đã luộc);110;3.0;23.0;0.5
+Phở lứt (đã luộc);105;2.8;22.0;0.4
+Hạt diêm mạch (Quinoa đã luộc);120;4.4;21.3;1.9
+Bún nưa (Shirataki);9;0.0;3.0;0.0
+Cơm súp lơ trắng (Cauliflower rice);25;2.0;5.0;0.3
+Salad ức gà xốt mè rang;125;12.0;6.0;6.5
+Salad cá ngừ xốt dầu giấm;110;10.0;5.0;6.0
+Salad tôm bơ;145;8.0;7.0;10.0
+Bông cải xanh luộc;35;2.4;7.0;0.4
+Súp lơ trắng luộc;23;1.8;4.0;0.2
+Măng tây hấp;22;2.4;4.0;0.2
+Rau chân vịt luộc (Spinach);23;3.0;3.8;0.3
+Cà chua bi;18;0.9;3.9;0.2
+Dưa leo (dưa chuột);15;0.6;3.6;0.1
+Ớt chuông sống;31;1.0;6.0;0.3
+Bí ngòi luộc;16;1.2;3.3;0.2
+Nấm đùi gà áp chảo;35;3.0;5.0;0.5
+Sữa chua Hy Lạp (không đường);97;9.0;4.0;5.0
+Sữa tươi không đường;60;3.2;4.8;3.3
+Sữa hạt hạnh nhân (không đường);15;0.6;0.3;1.2
+Sữa đậu nành không đường;33;3.3;1.8;1.5
+Bột Whey Protein (tính trên 100g bột);370;80.0;5.0;2.0
+Granola (không đường);470;14.0;60.0;20.0
+Thanh protein (Protein bar);400;30.0;40.0;12.0
+Bơ đậu phộng nguyên chất;588;25.0;20.0;50.0
+Hạt hạnh nhân rang mộc;579;21.0;21.0;49.0
+Hạt óc chó;654;15.0;13.0;65.0
+Hạt điều rang mộc;553;18.0;30.0;43.0
+Hạt chia;486;16.0;42.0;30.0
+Hạt bí đỏ rang mộc;574;29.0;15.0;49.0
+Đậu hũ non luộc;76;8.0;1.9;4.8
+Tempeh (Tương nén) áp chảo;192;19.0;9.0;11.0
+Sinh tố bơ (dùng sữa hạt không đường);120;2.0;8.0;10.0
+Sinh tố chuối yến mạch;95;3.0;18.0;1.5
+Nước ép cần tây táo;35;0.5;8.0;0.1
+Nước ép cà rốt;40;0.9;9.0;0.2
+Nước ép củ dền;43;1.6;9.6;0.2
+Trái cây tô (không sữa đặc);50;0.5;12.0;0.2
+Trứng gà ốp la (xịt dầu ăn kiêng);150;13.0;1.1;10.0
+Bò hầm tiêu xanh (phần nạc);160;20.0;5.0;6.0
+Gà rán (KFC/Lotteria);295;14.0;16.0;19.0
+Khoai tây chiên;312;3.4;41.0;15.0
+Hamburger bò;295;13.0;24.0;14.0
+Hamburger gà;280;12.0;26.0;12.0
+Pizza hải sản;260;11.0;30.0;10.0
+Pizza phô mai;270;12.0;32.0;11.0
+Mì Ý sốt bò băm (Spaghetti);135;5.5;20.0;3.5
+Sandwich bơ đậu phộng;320;12.0;35.0;16.0
+Hotdog (Bánh mì kẹp xúc xích);290;10.0;28.0;15.0
+Ba chỉ bò Mỹ (Lẩu/Nướng);280;15.0;0.0;24.0
+Lõi vai bò Mỹ;180;20.0;0.0;10.0
+Dẻ sườn bò;260;16.0;0.0;21.0
+Mực nang nướng;110;16.0;2.0;3.0
+Bạch tuộc nướng;105;15.0;2.0;3.0
+Nấm kim châm;37;2.7;7.0;0.2
+Nấm hương tươi;34;2.2;6.8;0.2
+Đậu hũ phô mai (Viên lẩu);210;10.0;14.0;12.0
+Cá viên nhân trứng muối;220;11.0;15.0;12.0
+Thanh cua;95;4.5;15.0;1.5
+Xúc xích phô mai;280;11.0;5.0;24.0
+Sủi cảo tôm thịt;190;9.0;22.0;7.0
+Há cảo tôm;160;7.0;24.0;3.5
+Xíu mại tôm thịt;200;10.0;12.0;12.0
+Bánh bao xá xíu;230;7.0;35.0;6.0
+Cải thảo luộc;16;1.2;3.2;0.2
+Cải thìa nhúng lẩu;13;1.5;2.2;0.2
+Mì tôm (chưa nấu);450;9.0;60.0;18.0
+Miến dong (chưa nấu);350;0.5;82.0;0.2
+Nước lẩu Thái;45;1.5;5.0;2.0
+Nước lẩu nấm;30;1.0;4.0;1.0
+Bánh sừng trâu (Croissant);406;8.0;45.0;21.0
+Bánh tart trứng;320;6.0;30.0;18.0
+Bánh quy bơ (Butter cookies);500;6.0;65.0;24.0
+Bánh Tiramisu;310;5.5;30.0;19.0
+Bánh Mousse chanh dây;280;4.5;32.0;15.0
+Bánh kem xốp;330;5.0;45.0;14.0
+Bánh bông lan trứng muối;350;10.0;40.0;16.0
+Bánh mì hoa cúc;340;8.5;48.0;12.5
+Bánh Donut phủ socola;420;5.0;50.0;22.0
+Bánh Macaron;450;6.0;65.0;18.0
+Bánh Flan (Caramel);145;5.0;22.0;4.0
+Bánh Brownie;466;5.5;55.0;25.0
+Bánh Cheesecake;321;5.5;25.0;22.0
+Bánh Crepe sầu riêng;250;4.0;25.0;15.0
+Bánh Waffle;290;6.0;42.0;10.0
+Bánh mì bơ tỏi;350;8.0;45.0;15.0
+Bánh mì phô mai bắp;320;9.0;42.0;12.0
+Muffin socola;375;5.0;50.0;18.0
+Cupcake dâu;340;4.5;52.0;14.0
+Cơm nắm cá ngừ (Onigiri);150;5.0;28.0;2.0
+Sushi cá hồi;140;6.0;26.0;1.5
+Kimbap Hàn Quốc;160;4.5;28.0;3.0
+Tokbokki (Bánh gạo cay);190;4.0;40.0;1.5
+Chả cá Hàn Quốc (Odeng);140;12.0;15.0;3.5
+Bánh mì sandwich lúa mì;250;9.0;45.0;3.5
+Snack khoai tây (Potato chips);536;7.0;53.0;35.0
+Snack bắp (Corn chips);500;6.0;60.0;25.0
+Kẹo dẻo (Gummy bears);350;5.0;80.0;0.0
+Socola đen (70% cacao);598;8.0;46.0;43.0
+Socola sữa;535;7.5;59.0;30.0
+Kem vani;207;3.5;24.0;11.0
+Kem socola;216;4.0;28.0;10.0
+Xúc xích tiệt trùng ăn liền;250;12.0;5.0;20.0
+Trứng cút bóc vỏ ăn liền;160;13.0;1.0;11.0
+Hạt hướng dương tẩm vị;580;20.0;20.0;50.0
+Đậu phộng da cá;480;15.0;40.0;28.0
+Nước tăng lực (Red Bull/Monster);45;0.0;11.0;0.0
+Coca Cola / Pepsi (Bản thường);42;0.0;10.6;0.0
+Trà ô long đóng chai (có đường);20;0.0;5.0;0.0
+Sữa chua uống;75;2.5;12.0;1.5
+Sữa socola;85;3.2;11.0;3.0
+Táo;52;0.3;13.8;0.2
+Chuối;89;1.1;22.8;0.3
+Cam;47;0.9;11.8;0.1
+Dưa hấu;30;0.6;7.6;0.2
+Xoài;60;0.8;15.0;0.4
+Sầu riêng;147;1.5;27.1;5.3
+Mít;95;1.7;23.2;0.6
+Nhãn;60;1.3;15.1;0.1
+Vải;66;0.8;16.5;0.4
+Thanh long;60;1.2;13.0;0.4
+Bưởi;38;0.8;9.6;0.0
+Bơ (Avocado);160;2.0;8.5;14.7
+Đu đủ;43;0.5;10.8;0.3
+Dứa (Thơm);50;0.5;13.1;0.1
+Ổi;68;2.6;14.3;1.0
+Chôm chôm;82;0.9;20.8;0.2
+Măng cụt;73;0.6;18.0;0.6
+Mít sấy;408;2.5;80.0;8.6
+Chuối sấy;519;2.3;58.4;30.0
+Khoai lang sấy;480;3.0;65.0;23.0
+Nho khô;299;3.1;79.2;0.5
+Thịt trâu gác bếp;320;55.0;3.0;9.0
+Thịt lợn gác bếp;350;50.0;5.0;14.0
+Mực tẩm gia vị;330;45.0;20.0;8.0
+Rong biển cháy tỏi;380;15.0;35.0;20.0
+Nước mắm;35;5.0;3.5;0.0
+Nước tương (Xì dầu);53;3.2;9.6;0.1
+Tương ớt;120;1.5;28.0;0.5
+Tương cà;112;1.0;27.0;0.2
+Sốt mayonnaise;680;1.0;0.5;75.0
+Mắm nêm;50;6.0;6.0;0.0
+Mắm tôm;60;8.0;4.0;1.0
+Dầu hào;51;1.4;11.0;0.2
+Sốt mè rang;420;3.0;15.0;39.0
+Bánh đa cua;115;5.0;18.0;2.5
+Cháo ếch Singapore;120;8.0;15.0;3.0
+Cơm niêu;170;4.0;35.0;1.5
+Bún chả cá;100;6.0;16.0;1.5
+Bánh hỏi heo quay;250;10.0;20.0;14.0
+Mì xào giòn;280;8.0;38.0;11.0
+Nui xào bò;210;10.0;25.0;8.0
+Hủ tiếu xào;230;7.0;32.0;8.0
+Bún sứa;85;4.0;16.0;0.5
+Gỏi cuốn chay;80;3.0;15.0;1.0
+Bì cuốn;110;6.0;14.0;3.0
+Ốc len xào dừa;180;10.0;8.0;12.0
+Sò huyết cháy tỏi;120;14.0;5.0;4.5
+Sò điệp nướng mỡ hành;150;16.0;3.0;8.0
+Hàu nướng phô mai;180;10.0;5.0;13.0
+Cháo hàu;90;5.0;12.0;2.5
+Cháo trắng lá dứa;60;1.5;13.0;0.2
+Dưa món;45;1.0;10.0;0.1
+Củ kiệu ngâm chua ngọt;50;1.2;11.0;0.1
+Thịt ngâm nước mắm;280;16.0;5.0;22.0
+Nem nướng Nha Trang;240;11.0;12.0;16.0
+Tom Yum;80;5.0;5.0;4.5
+Pad Thái;280;8.0;42.0;9.0
+Mì Udon;130;3.0;28.0;0.5
+Mì Ramen;436;10.0;60.0;17.0
+Cơm cuộn trứng (Omurice);185;6.5;22.0;7.5
+Bánh xèo Nhật (Okonomiyaki);195;6.0;20.0;10.0
+Takoyaki (Bánh bạch tuộc);175;5.0;22.0;7.0
+Miến trộn Hàn Quốc (Japchae);160;3.0;30.0;3.0
+Thịt ba chỉ nướng Hàn Quốc (Samgyeopsal);350;15.0;0.0;32.0
+Bò cuộn nấm kim châm nướng;210;14.0;3.0;16.0
+Canh kim chi đậu hũ;85;6.0;8.0;3.0
+Gà rán sốt Hàn Quốc (Yangnyeom);320;14.0;25.0;18.0
+Mì tương đen (Jajangmyeon);230;7.0;35.0;7.0
+Snack khoai tây vị phô mai (Lay's/O'Star);530;6.0;52.0;34.0
+Snack khoai tây vị tảo biển;520;5.5;54.0;32.0
+Snack tôm (Oishi);480;5.0;65.0;22.0
+Snack cua;470;4.5;68.0;20.0
+Snack mực cay;475;5.0;66.0;21.0
+Bim bim cánh dơi (Poca);510;5.5;60.0;27.0
+Snack bắp ngọt;490;4.0;70.0;21.0
+Snack bắp nón (Corn chip);505;5.0;65.0;25.0
+Bim bim que cay;460;6.0;62.0;20.0
+Snack da heo sấy hành tỏi;550;45.0;2.0;40.0
+Snack rong biển kẹp hạt;410;15.0;35.0;23.0
+Bánh gạo nướng vị ngọt (One One);420;4.0;80.0;9.0
+Bánh gạo vị tảo biển;430;4.5;78.0;10.0
+Bánh gạo cay Hàn Quốc (đóng gói);390;5.0;85.0;3.0
+Kẹo mút (Chupa Chups);390;0.0;95.0;0.0
+Kẹo dẻo vị trái cây (Sugus/Chupa Chups);350;5.0;80.0;0.5
+Kẹo dẻo chip chip;340;6.0;78.0;0.2
+Kẹo marshmallow;318;1.8;81.0;0.2
+Kẹo socola M&M;490;4.5;70.0;21.0
+Kẹo socola Snickers;480;8.0;60.0;23.0
+Kẹo socola KitKat;500;6.0;62.0;25.0
+Kẹo socola nhân hạt phỉ (Ferrero);595;8.2;44.0;42.0
+Kẹo hương dâu (Alpenliebe);410;1.0;85.0;7.0
+Kẹo caramen sữa (Mentos);390;0.5;90.0;2.0
+Kẹo cao su không đường;180;0.0;70.0;0.0
+Kẹo bạc hà (Cool Air/Doublemint);380;0.0;95.0;0.0
+Kẹo sâm Hàn Quốc;395;0.0;98.0;0.0
+Kẹo ngậm ho thảo mộc;390;0.0;97.0;0.0
+Thạch trái cây (Rau câu Zai Zai);80;0.1;19.0;0.0
+Thạch dừa chua ngọt;75;0.2;18.0;0.0
+Bánh xốp nhân phô mai (Nabati);500;6.0;60.0;26.0
+Bánh xốp sô cô la;490;5.5;62.0;24.0
+Bánh quy bơ (Danisa);505;5.0;65.0;25.0
+Bánh quy kẹp kem (Oreo);480;5.0;68.0;21.0
+Bánh quy mặn (AFC/Ritz);495;8.0;60.0;24.0
+Bánh quy đồng tiền;450;6.0;70.0;15.0
+Bánh gấu nhân kem;470;5.5;72.0;18.0
+Bánh quế nhân kem (Cosy);460;5.0;75.0;15.0
+Bánh trứng nướng (Tipo);485;7.0;60.0;23.0
+Bánh Chocopie;430;4.0;65.0;17.0
+Bánh Custas;420;5.0;58.0;18.0
+Bánh bông lan cuộn kem (Solite);410;4.5;60.0;16.0
+Trái cây sấy thập cẩm;450;2.0;70.0;18.0
+Mít sấy giòn;430;2.5;75.0;12.0
+Khoai môn sấy;460;3.0;68.0;19.0
+Chuối sấy mè gừng;480;2.0;72.0;20.0
+Hạt điều rang muối;580;18.0;27.0;44.0
+Hạt dẻ cười rang muối;560;20.0;28.0;45.0
+Hạt macca;718;8.0;14.0;76.0
+Hạt dưa rang;570;28.0;15.0;47.0
+Hạt bí rang muối;540;24.0;18.0;45.0
+Hạt hướng dương tẩm vị dừa;585;19.0;18.0;50.0
+Đậu phộng da cá vị nước cốt dừa;510;14.0;45.0;30.0
+Đậu phộng rang tỏi ớt;560;22.0;20.0;45.0
+Đậu hà lan sấy mù tạt;430;17.0;60.0;14.0
+Khô gà lá chanh;340;45.0;20.0;8.0
+Khô heo cháy tỏi;380;40.0;15.0;16.0
+Khô bò tẩm gia vị;320;50.0;18.0;5.0
+Mực xé sợi hấp nước dừa;290;42.0;15.0;6.0
+Da cá sấy trứng muối;610;25.0;10.0;52.0
+Cơm cháy chà bông;480;12.0;60.0;22.0
+Bánh tráng rìa tẩm sa tế;380;3.0;65.0;11.0
+Bánh tráng cuộn bơ;420;4.0;55.0;20.0
+Kẹo mè xửng;405;5.0;75.0;9.0
+Kẹo chuối bọc bánh tráng;380;2.0;80.0;5.0
+Kẹo lạc (Kẹo đậu phộng);460;12.0;60.0;20.0
+Bánh phồng tôm (chưa chiên);340;1.5;82.0;0.2
+Bánh phồng tôm (đã chiên);480;1.2;65.0;24.0
+Cơm cháy kho quẹt (đóng gói ăn liền);450;10.0;55.0;20.0
+Bánh tráng nướng mắm ruốc (đóng gói);410;6.0;60.0;16.0
