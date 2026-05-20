@@ -22,6 +22,13 @@ class NutritionRepository @Inject constructor(
     private val weightDao: WeightDao,
     private val localFoodDataProvider: LocalFoodDataProvider
 ) {
+    suspend fun clearAllData() {
+        userDao.deleteUser()
+        dailyRecordDao.deleteAllDailyRecords()
+        mealDao.deleteAllMeals()
+        weightDao.deleteAllWeightRecords()
+    }
+    
     // User
     fun getUserProfile(): Flow<UserEntity?> = userDao.getUserProfile()
     suspend fun saveUserProfile(user: UserEntity) = userDao.insertUser(user)

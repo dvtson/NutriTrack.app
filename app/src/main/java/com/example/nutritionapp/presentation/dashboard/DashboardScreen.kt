@@ -16,6 +16,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.animation.core.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -33,6 +35,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.nutritionapp.data.local.entity.MealEntity
 import com.example.nutritionapp.presentation.MainViewModel
+import androidx.compose.ui.tooling.preview.Preview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -130,8 +133,27 @@ fun DashboardScreen(
 
 @Composable
 fun CalorieRingCard(current: Int, target: Int) {
-    val progress = if (target > 0) (current.toFloat() / target.toFloat()).coerceIn(0f, 1f) else 0f
+    var startAnimation by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) { startAnimation = true }
+
+    val animatedProgress by animateFloatAsState(
+        targetValue = if (startAnimation) (if (target > 0) (current.toFloat() / target.toFloat()).coerceIn(0f, 1f) else 0f) else 0f,
+        animationSpec = tween(durationMillis = 1500, easing = FastOutSlowInEasing),
+        label = "calorieProgress"
+    )
+
+    val animatedCurrent by animateIntAsState(
+        targetValue = if (startAnimation) current else 0,
+        animationSpec = tween(durationMillis = 1500, easing = FastOutSlowInEasing),
+        label = "calorieCurrent"
+    )
+
     val remaining = (target - current).coerceAtLeast(0)
+    val animatedRemaining by animateIntAsState(
+        targetValue = if (startAnimation) remaining else target,
+        animationSpec = tween(durationMillis = 1500, easing = FastOutSlowInEasing),
+        label = "calorieRemaining"
+    )
 
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -158,20 +180,20 @@ fun CalorieRingCard(current: Int, target: Int) {
                     drawArc(
                         brush = Brush.linearGradient(GradientNavyGreen),
                         startAngle = -90f,
-                        sweepAngle = 360f * progress,
+                        sweepAngle = 360f * animatedProgress,
                         useCenter = false,
                         style = Stroke(width = 12.dp.toPx(), cap = StrokeCap.Round)
                     )
                 }
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(text = "$current", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = MaterialTheme.colorScheme.onSurface)
+                    Text(text = "$animatedCurrent", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = MaterialTheme.colorScheme.onSurface)
                     Text(text = "/ $target", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     Text(text = "kcal", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text("Còn lại", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 14.sp)
-                Text("$remaining", fontWeight = FontWeight.ExtraBold, fontSize = 24.sp, color = MaterialTheme.colorScheme.onSurface)
+                Text("$animatedRemaining", fontWeight = FontWeight.ExtraBold, fontSize = 24.sp, color = MaterialTheme.colorScheme.onSurface)
                 Text("kcal", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
             }
         }
@@ -232,7 +254,20 @@ fun MacroStatsCard(
 
 @Composable
 fun MacroItem(label: String, current: Int, target: Int, brush: Brush) {
+    var startAnimation by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) { startAnimation = true }
+
     val progress = if (target > 0) (current.toFloat() / target.toFloat()).coerceIn(0f, 1f) else 0f
+    val animatedProgress by animateFloatAsState(
+        targetValue = if (startAnimation) progress else 0f,
+        animationSpec = tween(durationMillis = 1500, easing = FastOutSlowInEasing),
+        label = "macroProgress"
+    )
+    val animatedCurrent by animateIntAsState(
+        targetValue = if (startAnimation) current else 0,
+        animationSpec = tween(durationMillis = 1500, easing = FastOutSlowInEasing),
+        label = "macroCurrent"
+    )
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(label, fontWeight = FontWeight.Medium, fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurface)
         Spacer(modifier = Modifier.height(12.dp))
@@ -246,13 +281,13 @@ fun MacroItem(label: String, current: Int, target: Int, brush: Brush) {
             Box(
                 modifier = Modifier
                     .fillMaxHeight()
-                    .fillMaxWidth(progress)
+                    .fillMaxWidth(animatedProgress)
                     .clip(CircleShape)
                     .background(brush)
             )
         }
         Spacer(modifier = Modifier.height(12.dp))
-        Text("$current / $target g", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text("$animatedCurrent / $target g", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
 
@@ -340,6 +375,25 @@ fun MealItemCard(meal: MealEntity, onDelete: () -> Unit) {
             IconButton(onClick = onDelete) {
                 Icon(Icons.Default.Delete, contentDescription = "Delete Meal", tint = MaroonRed)
             }
+        }
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFF121212)
+@Composable
+fun DashboardComponentsPreview() {
+    com.example.nutritionapp.ui.theme.NutritionAppTheme(darkTheme = true) {
+        Column(
+            modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            CalorieRingCard(current = 1250, target = 2200)
+            MacroStatsCard(
+                cProt = 55, tProt = 120,
+                cCarb = 180, tCarb = 250,
+                cFat = 45, tFat = 70
+            )
+            WaterTrackerCard(waterMl = 1250, onAddWater = {}, onRemoveWater = {})
         }
     }
 }

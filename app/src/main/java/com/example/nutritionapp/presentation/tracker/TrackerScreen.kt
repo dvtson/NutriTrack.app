@@ -9,6 +9,11 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.animation.core.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -83,6 +88,15 @@ fun WeeklyAnalysisCard(records: List<com.example.nutritionapp.data.local.entity.
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
+        var startAnimation by remember { mutableStateOf(false) }
+        LaunchedEffect(Unit) { startAnimation = true }
+
+        val animatedProgress by animateFloatAsState(
+            targetValue = if (startAnimation) 1f else 0f,
+            animationSpec = tween(durationMillis = 1500, easing = FastOutSlowInEasing),
+            label = "weeklyAnimation"
+        )
+
         Column(modifier = Modifier.padding(16.dp)) {
             Text("Báo cáo tuần (7 ngày gần nhất)", fontWeight = FontWeight.Bold, fontSize = 18.sp)
             Spacer(modifier = Modifier.height(24.dp))
@@ -97,14 +111,17 @@ fun WeeklyAnalysisCard(records: List<com.example.nutritionapp.data.local.entity.
                 
                 chartData.forEach { (dateLabel, cals) ->
                     val ratio = (cals.toFloat() / safeMaxCal).coerceIn(0f, 1f)
+                    val animatedRatio = ratio * animatedProgress
                     val barColor = if (cals > targetCals) Color.Red else MaterialTheme.colorScheme.primary
                     
+                    val animatedCals = (cals * animatedProgress).roundToInt()
+
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally, 
                         verticalArrangement = Arrangement.Bottom, 
                         modifier = Modifier.fillMaxHeight()
                     ) {
-                        Text(if (cals > 0) "$cals" else "", fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(bottom = 2.dp))
+                        Text(if (animatedCals > 0) "$animatedCals" else "", fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(bottom = 2.dp))
                         Spacer(modifier = Modifier.height(4.dp))
                         Box(
                             modifier = Modifier
@@ -121,7 +138,7 @@ fun WeeklyAnalysisCard(records: List<com.example.nutritionapp.data.local.entity.
                             Box(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .fillMaxHeight(ratio.coerceAtLeast(0.02f))
+                                    .fillMaxHeight(animatedRatio.coerceAtLeast(0.02f))
                                     .background(if (cals > targetCals) Brush.linearGradient(listOf(Color.White, MaroonRed)) else Brush.linearGradient(GradientNavyGreen), RoundedCornerShape(4.dp))
                             )
                         }
@@ -194,7 +211,7 @@ fun BMITrackerCard(
             Text(
                  text = targetMessage, 
                  fontSize = 13.sp, 
-                 color = MaterialTheme.colorScheme.primary, 
+                 style = LocalTextStyle.current.copy(brush = Brush.linearGradient(GradientNavyGreen)), 
                  fontWeight = FontWeight.SemiBold,
                  modifier = Modifier.padding(top = 12.dp)
             )
@@ -208,6 +225,17 @@ fun WeightTrendChart(records: List<WeightRecordEntity>) {
     val minWeight = (records.minOfOrNull { it.weightKg } ?: 0.0) - 2.0
     val weightRange = (maxWeight - minWeight).coerceAtLeast(2.0)
     val weightData = records.map { it.weightKg }
+
+    var startAnimation by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) { startAnimation = true }
+
+    val animatedProgress by animateFloatAsState(
+        targetValue = if (startAnimation) 1f else 0f,
+        animationSpec = tween(durationMillis = 1500, easing = FastOutSlowInEasing),
+        label = "weightTrendAnimation"
+    )
+    
+    val pathMeasure = remember { androidx.compose.ui.graphics.PathMeasure() }
     
     Column(modifier = Modifier.fillMaxWidth()) {
         Row(
@@ -231,10 +259,19 @@ fun WeightTrendChart(records: List<WeightRecordEntity>) {
                 val x = index * stepX
                 val y = height - ((w - minWeight) / weightRange).toFloat() * height
                 if (index == 0) weightPath.moveTo(x, y) else weightPath.lineTo(x, y)
-                drawCircle(color = VibrantGreen, radius = 5.dp.toPx(), center = androidx.compose.ui.geometry.Offset(x, y))
+                
+                // Only draw circle if it falls within the animated portion (approximately based on X)
+                if (x <= width * animatedProgress) {
+                    drawCircle(color = VibrantGreen, radius = 5.dp.toPx(), center = androidx.compose.ui.geometry.Offset(x, y))
+                }
             }
+            
+            pathMeasure.setPath(weightPath, false)
+            val animatedPath = androidx.compose.ui.graphics.Path()
+            pathMeasure.getSegment(0f, pathMeasure.length * animatedProgress, animatedPath, true)
+            
             drawPath(
-                path = weightPath, 
+                path = animatedPath, 
                 color = VibrantGreen.copy(alpha = 0.6f), 
                 style = androidx.compose.ui.graphics.drawscope.Stroke(width = 2.dp.toPx())
             )

@@ -23,4 +23,7 @@ interface DailyRecordDao {
 
     @Query("DELETE FROM daily_record_table WHERE dateString = :date")
     suspend fun deleteDailyRecordByDate(date: String)
+
+    @Query("DELETE FROM daily_record_table")
+    suspend fun deleteAllDailyRecords()
 }

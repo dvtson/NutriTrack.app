@@ -14,4 +14,7 @@ interface WeightDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertWeightRecord(record: WeightRecordEntity)
+
+    @Query("DELETE FROM weight_table")
+    suspend fun deleteAllWeightRecords()
 }

@@ -20,6 +20,9 @@ fun ProfileScreen(
             viewModel.saveProfile(user)
             onNavigateBack() // Also navigate back after saving
         },
-        onCancel = onNavigateBack
+        onCancel = onNavigateBack,
+        onDeleteData = {
+            viewModel.resetApp()
+        }
     )
 }

@@ -128,4 +128,13 @@ class MainViewModel @Inject constructor(
             )
         }
     }
+
+    /**
+     * Xoá toàn bộ dữ liệu ứng dụng
+     */
+    fun resetApp() {
+        viewModelScope.launch {
+            repository.clearAllData()
+        }
+    }
 }

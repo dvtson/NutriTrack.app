@@ -14,6 +14,20 @@ object NutritionCalculator {
         return weightKg / (heightM * heightM)
     }
 
+    data class BMIResult(val classification: String, val recommendation: String, val recommendedGoal: String)
+
+    /**
+     * Phân loại BMI theo chuẩn Châu Á
+     */
+    fun getBMIClassification(bmi: Double): BMIResult {
+        return when {
+            bmi < 18.5 -> BMIResult("Thiếu cân", "Bạn đang hơi gầy. Nên ăn nhiều hơn để tăng cường sức khỏe và cơ bắp.", "BUILD_MUSCLE")
+            bmi < 23.0 -> BMIResult("Bình thường", "Tuyệt vời! Chỉ số của bạn rất tốt. Hãy tiếp tục duy trì chế độ ăn uống và tập luyện nhé.", "MAINTAIN")
+            bmi < 25.0 -> BMIResult("Thừa cân", "Bạn đang hơi thừa cân. Nên chú ý kiểm soát lượng calo nạp vào và tăng cường vận động.", "LOSE_WEIGHT")
+            else -> BMIResult("Béo phì", "Bạn đang ở mức béo phì. Cần có kế hoạch giảm cân để tránh các nguy cơ bệnh lý.", "LOSE_WEIGHT")
+        }
+    }
+
     /**
      * Tính Tỉ lệ trao đổi chất cơ bản (BMR) theo phương trình Mifflin-St Jeor
      * @param weightKg Cân nặng tính bằng kg
