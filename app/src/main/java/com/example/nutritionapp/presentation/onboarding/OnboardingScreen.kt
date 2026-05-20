@@ -92,7 +92,6 @@ fun OnboardingScreen(
             )
         }
 
-        // --- OLD PROFILE EDITING STYLE ---
         Scaffold { padding ->
             Column(
                 modifier = Modifier
