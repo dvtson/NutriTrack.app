@@ -62,7 +62,8 @@ fun TrackerScreen(viewModel: TrackerViewModel = hiltViewModel()) {
             item {
                 BMITrackerCard(
                     weightRecords = weightRecords,
-                    userProfile = userProfile
+                    userProfile = userProfile,
+                    onLogWeight = { weight -> viewModel.logWeight(weight) }
                 )
             }
         }
@@ -153,8 +154,10 @@ fun WeeklyAnalysisCard(records: List<com.example.nutritionapp.data.local.entity.
 @Composable
 fun BMITrackerCard(
     weightRecords: List<WeightRecordEntity>,
-    userProfile: com.example.nutritionapp.data.local.entity.UserEntity?
+    userProfile: com.example.nutritionapp.data.local.entity.UserEntity?,
+    onLogWeight: (Double) -> Unit
 ) {
+    var weightInput by remember { mutableStateOf("") }
     val currentWeight = weightRecords.firstOrNull()?.weightKg ?: userProfile?.weightKg ?: 0.0
     val heightCm = userProfile?.heightCm ?: 170.0
     val goal = userProfile?.goal ?: "MAINTAIN"
@@ -198,14 +201,43 @@ fun BMITrackerCard(
             Text("Cân nặng HT: ${if (currentWeight>0) "$currentWeight kg" else "--"}", fontWeight = FontWeight.SemiBold)
             Text("BMI: $formattedBmi ($bmiStatus)", color = MaterialTheme.colorScheme.onSurfaceVariant)
             
-            if (weightRecords.size >= 2) {
+            if (weightRecords.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(24.dp))
                 WeightTrendChart(records = weightRecords.take(7).reversed())
-            } else if (weightRecords.isNotEmpty()) {
+            } else {
                 Spacer(modifier = Modifier.height(16.dp))
-                Text("Cần tối thiểu 2 ngày có ghi nhận để vẽ đồ thị diễn biến.", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text("Chưa có dữ liệu ghi nhận cân nặng.", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             
+            Spacer(modifier = Modifier.height(16.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                OutlinedTextField(
+                    value = weightInput,
+                    onValueChange = { weightInput = it },
+                    label = { Text("Nhập cân nặng (kg)", fontSize = 12.sp) },
+                    modifier = Modifier.weight(1f).height(60.dp),
+                    keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(keyboardType = androidx.compose.ui.text.input.KeyboardType.Number),
+                    singleLine = true,
+                    shape = RoundedCornerShape(12.dp)
+                )
+                Spacer(modifier = Modifier.width(12.dp))
+                Button(
+                    onClick = {
+                        val w = weightInput.toDoubleOrNull()
+                        if (w != null && w > 0) {
+                            onLogWeight(w)
+                            weightInput = ""
+                        }
+                    },
+                    modifier = Modifier.height(60.dp),
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+                    Text("Cập nhật")
+                }
+            }
             Spacer(modifier = Modifier.height(16.dp))
             Divider(color = MaterialTheme.colorScheme.surfaceVariant, thickness = 0.5.dp)
             Text(
@@ -256,12 +288,12 @@ fun WeightTrendChart(records: List<WeightRecordEntity>) {
             
             val weightPath = androidx.compose.ui.graphics.Path()
             weightData.forEachIndexed { index, w ->
-                val x = index * stepX
+                val x = if (records.size > 1) index * stepX else width / 2
                 val y = height - ((w - minWeight) / weightRange).toFloat() * height
                 if (index == 0) weightPath.moveTo(x, y) else weightPath.lineTo(x, y)
                 
                 // Only draw circle if it falls within the animated portion (approximately based on X)
-                if (x <= width * animatedProgress) {
+                if (x <= width * animatedProgress || records.size == 1) {
                     drawCircle(color = VibrantGreen, radius = 5.dp.toPx(), center = androidx.compose.ui.geometry.Offset(x, y))
                 }
             }

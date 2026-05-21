@@ -29,6 +29,10 @@ class TrackerViewModel @Inject constructor(
     val userProfile: StateFlow<UserEntity?> = repository.getUserProfile()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
 
-    // Hàm logWeight đã được loại bỏ để tập trung nhiệm vụ Tracking Cân Nặng cho Onboarding/Profile Save
-    // Nhờ sự tập trung này, source code tránh được phân mảnh và lặp dữ liệu
+    fun logWeight(weight: Double) {
+        viewModelScope.launch {
+            val todayString = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))
+            repository.logWeight(WeightRecordEntity(dateString = todayString, weightKg = weight))
+        }
+    }
 }
