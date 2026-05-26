@@ -59,7 +59,7 @@ fun FoodSearchScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Thêm bữa ăn", fontWeight = FontWeight.Bold) },
+                title = { Text("Thêm bữa ăn", fontWeight = FontWeight.Bold, fontSize = 28.sp) },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.background,
                     titleContentColor = MaterialTheme.colorScheme.onBackground

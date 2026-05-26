@@ -13,34 +13,35 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.graphics.Color
 
 private val DarkColorScheme = darkColorScheme(
-    primary = NavyBlue,
-    secondary = VibrantGreen,
-    tertiary = RosePink,
-    background = DarkBackground,
-    surface = DarkSurface,
-    onPrimary = CrispWhite,
-    onBackground = CrispWhite,
-    onSurface = CrispWhite,
-    onSurfaceVariant = Color(0xFFB0BEC5), // Light gray for subtle text in dark mode
-    primaryContainer = NavyBlue,
-    onPrimaryContainer = CrispWhite,
-    surfaceContainer = DarkSurface,
-    surfaceVariant = DarkSurface
+    primary = PrimaryGreen,
+    secondary = MacroWater,
+    tertiary = MacroProtein,
+    background = AppBackground,
+    surface = AppSurface,
+    onPrimary = TextWhite,
+    onBackground = TextPrimary,    // Cấp 1: chữ chính sani
+    onSurface = TextPrimary,        // Cấp 1: chữ trên card
+    onSurfaceVariant = TextSecondary, // Cấp 2: nhãn, đơn vị
+    outline = TextDisabled,         // Cấp 3: placeholder, viền mờ
+    primaryContainer = PrimaryGreen,
+    onPrimaryContainer = TextWhite,
+    surfaceContainer = AppSurface,
+    surfaceVariant = AppSurfaceAlt
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = NavyBlue,
-    secondary = VibrantGreen,
-    tertiary = RosePink,
-    background = IceBlueLight,
-    surface = CrispWhite,
-    onPrimary = CrispWhite,
+    primary = PrimaryGreen,
+    secondary = MacroWater,
+    tertiary = MacroProtein,
+    background = TextWhite,
+    surface = TextWhite,
+    onPrimary = TextWhite,
     onBackground = TextDark,
     onSurface = TextDark,
-    onSurfaceVariant = TextLight,
-    primaryContainer = NavyBlue,
-    onPrimaryContainer = CrispWhite,
-    surfaceContainer = CrispWhite,
+    onSurfaceVariant = TextSecondary,
+    primaryContainer = PrimaryGreen,
+    onPrimaryContainer = TextWhite,
+    surfaceContainer = TextWhite,
     surfaceVariant = Color(0xFFF1F5F9)
 )
 

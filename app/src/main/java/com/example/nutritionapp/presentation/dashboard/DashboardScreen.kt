@@ -85,7 +85,13 @@ fun DashboardScreen(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text("Bảng điều khiển\nDinh dưỡng", fontSize = 22.sp, fontWeight = FontWeight.ExtraBold, color = MaterialTheme.colorScheme.onBackground)
+                    Text(
+                        text = "Dashboard\ndinh dưỡng",
+                        fontSize = 28.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        lineHeight = 34.sp,
+                        color = MaterialTheme.colorScheme.onBackground
+                    )
                     IconButton(onClick = onNavigateToProfile) {
                         Icon(Icons.Default.Person, contentDescription = "Hồ sơ", modifier = Modifier.size(28.dp), tint = MaterialTheme.colorScheme.primary)
                     }

@@ -50,7 +50,7 @@ fun TrackerScreen(viewModel: TrackerViewModel = hiltViewModel()) {
             item {
                 Text(
                     text = "Theo dõi hoạt động",
-                    fontSize = 24.sp,
+                    fontSize = 28.sp,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onBackground,
                     modifier = Modifier.padding(bottom = 8.dp)
