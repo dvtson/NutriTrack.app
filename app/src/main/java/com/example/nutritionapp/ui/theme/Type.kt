@@ -8,24 +8,8 @@ import androidx.compose.ui.unit.sp
 
 val interFontFamily = FontFamily.SansSerif
 
-// ─── Hằng số "Sàn" kích thước chữ ───────────────────────────────
-// TUYỆT ĐỐI KHÔNG dùng fontSize dưới MIN_FONT_SIZE ở bất kỳ màn hình nào
-val MIN_FONT_SIZE = 12.sp
-
-// ─── Bảng Typography chuẩn (5 cấp phân cấp thông tin) ──────────
-//
-//  Cấp     | Size   | Weight    | Color (ánh xạ)        | Ứng dụng
-//  ─────────────────────────────────────────────────────────────────
-//  Heading  | 28sp   | Bold 700  | White 100% (onBg)    | Chỉ số BMI to, Tổng Calo chính
-//  Title    | 17sp   | SemiBold  | White 100% (onBg)    | Tên màn hình, tên món ăn chính
-//  Body     | 15sp   | Regular   | White 90% (onSurface)| Chữ input, text hiển thị chung
-//  Secondary| 13sp   | Regular   | White 60% (onSVarnt) | Đơn vị kcal, g, số mục tiêu
-//  Caption  | 12sp ▲ | Regular   | White 60% (outline)  | Dòng chú thích nhỏ nhất
-
 val Typography = Typography(
-
-    // Cấp 1 – Heading / Big Value (28sp Bold)
-    // Dùng cho: Số calo tổng lớn, chỉ số BMI, tiêu đề trang chính
+    // Heading - số liệu lớn, tiêu đề trang
     displayMedium = TextStyle(
         fontFamily = interFontFamily,
         fontWeight = FontWeight.Bold,
@@ -33,9 +17,7 @@ val Typography = Typography(
         lineHeight = 34.sp,
         letterSpacing = (-0.5).sp
     ),
-
-    // Cấp 2 – Title / Label (17sp SemiBold)
-    // Dùng cho: Tên màn hình (Dashboard, Tracker...), tên món ăn chính
+    // Title lớn - tên màn hình, tên món ăn
     titleLarge = TextStyle(
         fontFamily = interFontFamily,
         fontWeight = FontWeight.SemiBold,
@@ -43,9 +25,7 @@ val Typography = Typography(
         lineHeight = 22.sp,
         letterSpacing = 0.sp
     ),
-
-    // Cấp 2b – Title Medium (15sp SemiBold)
-    // Dùng cho: Tên nhóm bữa ăn (Bữa sáng, Bữa trưa...)
+    // Title vừa - tên nhóm bữa ăn
     titleMedium = TextStyle(
         fontFamily = interFontFamily,
         fontWeight = FontWeight.SemiBold,
@@ -53,9 +33,7 @@ val Typography = Typography(
         lineHeight = 20.sp,
         letterSpacing = 0.sp
     ),
-
-    // Cấp 3 – Body (15sp Regular)
-    // Dùng cho: Chữ nhập vào input, text hiển thị chung, nội dung card
+    // Body - text nhập liệu, nội dung card
     bodyLarge = TextStyle(
         fontFamily = interFontFamily,
         fontWeight = FontWeight.Normal,
@@ -63,9 +41,7 @@ val Typography = Typography(
         lineHeight = 22.sp,
         letterSpacing = 0.sp
     ),
-
-    // Cấp 3b – Body Medium (14sp Regular)
-    // Dùng cho: Các dòng text thứ cấp trong card, thông tin bổ sung
+    // Body vừa - thông tin bổ sung
     bodyMedium = TextStyle(
         fontFamily = interFontFamily,
         fontWeight = FontWeight.Normal,
@@ -73,9 +49,7 @@ val Typography = Typography(
         lineHeight = 20.sp,
         letterSpacing = 0.sp
     ),
-
-    // Cấp 4 – Secondary / Caption (13sp Regular)
-    // Dùng cho: Đơn vị kcal, g, ml; số mục tiêu "/ 2310"; ngày tháng
+    // Body nhỏ - đơn vị, số mục tiêu, ngày tháng
     bodySmall = TextStyle(
         fontFamily = interFontFamily,
         fontWeight = FontWeight.Normal,
@@ -83,9 +57,7 @@ val Typography = Typography(
         lineHeight = 18.sp,
         letterSpacing = 0.sp
     ),
-
-    // Cấp 5 – Caption / Hint (12sp Regular) ← SÀN TỐI THIỂU
-    // Dùng cho: Dòng chú thích "Đ: 21g - TĐ: 80g", placeholder input
+    // Label nhỏ nhất - chú thích (tối thiểu 12sp)
     labelSmall = TextStyle(
         fontFamily = interFontFamily,
         fontWeight = FontWeight.Normal,
@@ -93,8 +65,7 @@ val Typography = Typography(
         lineHeight = 16.sp,
         letterSpacing = 0.sp
     ),
-
-    // Label Medium – cho nút bấm, chip
+    // Label - nút bấm, chip
     labelMedium = TextStyle(
         fontFamily = interFontFamily,
         fontWeight = FontWeight.Medium,

@@ -67,11 +67,11 @@ class MainActivity : ComponentActivity() {
                                         icon = { Icon(item.icon, contentDescription = item.title) },
                                         label = { Text(item.title) },
                                         selected = currentRoute == item.route,
-                                        colors = NavigationBarItemDefaults.colors(
-                                            selectedIconColor = MaterialTheme.colorScheme.primary, // Or VibrantGreen
+                        colors = NavigationBarItemDefaults.colors(
+                                            selectedIconColor = MaterialTheme.colorScheme.primary,
                                             unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
                                             indicatorColor = Color.Transparent,
-                                            selectedTextColor = MaterialTheme.colorScheme.primary, // Highlight color
+                                            selectedTextColor = MaterialTheme.colorScheme.primary,
                                             unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
                                         ),
                                         onClick = {

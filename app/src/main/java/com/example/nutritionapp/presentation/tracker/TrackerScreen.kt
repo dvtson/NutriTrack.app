@@ -122,7 +122,7 @@ fun WeeklyAnalysisCard(records: List<com.example.nutritionapp.data.local.entity.
                         verticalArrangement = Arrangement.Bottom, 
                         modifier = Modifier.fillMaxHeight()
                     ) {
-                        Text(if (animatedCals > 0) "$animatedCals" else "", fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(bottom = 2.dp))
+                        Text(if (animatedCals > 0) "$animatedCals" else "", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(bottom = 2.dp))
                         Spacer(modifier = Modifier.height(4.dp))
                         Box(
                             modifier = Modifier
@@ -143,7 +143,7 @@ fun WeeklyAnalysisCard(records: List<com.example.nutritionapp.data.local.entity.
                                     .background(if (cals > targetCals) Brush.linearGradient(listOf(Color.White, MaroonRed)) else Brush.linearGradient(GradientNavyGreen), RoundedCornerShape(4.dp))
                             )
                         }
-                        Text(dateLabel, fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(dateLabel, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                 }
             }
@@ -313,7 +313,7 @@ fun WeightTrendChart(records: List<WeightRecordEntity>) {
              records.forEach { 
                  val dateParts = it.dateString.split("-")
                  val label = if(dateParts.size >= 3) "${dateParts[2]}/${dateParts[1]}" else it.dateString
-                 Text(label, fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                 Text(label, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
              }
         }
     }

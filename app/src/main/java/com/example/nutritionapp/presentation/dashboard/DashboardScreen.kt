@@ -293,7 +293,7 @@ fun MacroItem(label: String, current: Int, target: Int, brush: Brush) {
             )
         }
         Spacer(modifier = Modifier.height(12.dp))
-        Text("$animatedCurrent / $target g", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text("$animatedCurrent / $target g", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
 
@@ -372,11 +372,11 @@ fun MealItemCard(meal: MealEntity, onDelete: () -> Unit) {
                     else -> meal.mealType
                 }
                 Text(meal.foodName, fontWeight = FontWeight.SemiBold, fontSize = 15.sp, color = MaterialTheme.colorScheme.onSurface, maxLines = 2, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
-                Text(typeLabel, fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 4.dp))
+                Text(typeLabel, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 4.dp))
             }
             Column(horizontalAlignment = Alignment.End, modifier = Modifier.padding(end = 8.dp)) {
                 Text("${meal.calories} kcal", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Medium, fontSize = 15.sp)
-                Text("Đ: ${meal.protein}g • TB: ${meal.carbs}g • B: ${meal.fat}g", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 4.dp))
+                Text("Đ: ${meal.protein}g • TB: ${meal.carbs}g • B: ${meal.fat}g", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 4.dp))
             }
             IconButton(onClick = onDelete) {
                 Icon(Icons.Default.Delete, contentDescription = "Delete Meal", tint = MaroonRed)
